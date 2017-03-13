@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1000, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen:400,700">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="layout.css">
+    <script charset="utf-8" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script charset="utf-8" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+    <script charset="utf-8" src="//cdn.jsdelivr.net/jquery.validation/1.13.1/jquery.validate.min.js"></script>
+    <script charset="utf-8" src="webapp.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function() {
+    
+    
+	$('div.dataTables_filter input').attr('id', 'search');
+	document.getElementById("search").accessKey = "s";
+} );
+  
+
+</script>
+  </head>
+  <body >
+
+    <div id="page_container">
+
+   
+      <button type="button" class= "btn-sample" id="add_company" accesskey="a">Add Bug</button>
+
+	<br><br>  
+	  
+ <div class="table-responsive">  
+      <table class="table table-hover" id="table_companies">
+        <thead class="thead-inverse">
+          <tr>
+            <th bgcolor="black"><font color="#fff"></font> <i class="fa fa-fw fa-sort"></i></th>
+            <th bgcolor="black"><font color="#fff">BugName</font><i class="fa fa-fw fa-sort"></i></th>
+            <th bgcolor="black"><font color="#fff">Description</font><i class="fa fa-fw fa-sort"></i></th>
+            <th bgcolor="black"><font color="#fff">Solutions</font><i class="fa fa-fw fa-sort"></i></th>
+            <th bgcolor="black"><font color="#fff">Functions</font></th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+
+    </div>  </div>
+
+    <div class="lightbox_bg"></div>
+
+    <div class="lightbox_container">
+      <div class="lightbox_close"></div>
+      <div class="lightbox_content">
+        
+        <h2>Add Bug</h2>
+        <form class="form add" id="form_company" data-id="" novalidate>
+          <div class="input_container">
+            <label for="bugname">BugName: <span class="required">*</span></label>
+            <div class="field_container">
+              <input type="text" class="text" name="bugname" id="bugname" value="" required>
+            </div>
+          </div>
+          <div class="input_container">
+            <label for="description">Description: <span class="required">*</span></label>
+            <div class="field_container">
+              <input type="text" class="text" name="description" id="description" value="" required>
+            </div>
+          </div>
+          <div class="input_container">
+            <label for="solutions">Solutions: <span class="required">*</span></label>
+            <div class="field_container">
+              <input type="text" class="text" name="solutions" id="solutions" value="" required>
+            </div>
+          </div>
+          <div class="button_container">
+            <button type="submit" class= "btn-sample">Add Bug</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+
+    <noscript id="noscript_container">
+      <div id="noscript" class="error">
+        <p>JavaScript support is needed to use this page.</p>
+      </div>
+    </noscript>
+
+    <div id="message_container">
+      <div id="message" class="success">
+        <p>This is a success message.</p>
+      </div>
+    </div>
+
+    <div id="loading_container">
+      <div id="loading_container2">
+        <div id="loading_container3">
+          <div id="loading_container4">
+            Loading, please wait...
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
